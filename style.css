@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.alert.success{
+    position: fixed;
+    top: 100px;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.alert.warning{
+    position: fixed;
+    top: 100px;
+    background-color: rgb(221, 143, 0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.container{
+    width: 300px;
+    border:2px solid var(--black);
+    padding: 10px 15px;
+}
+
+.ekle-text {
+    width: 200px;
+    height: 40px;
+    padding:5px 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.ekle-btn {
+    width: 60px;
+    height: 40px;
+    padding: 10px 0;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.search-text {
+    margin: 20px 0;
+    width: 265px;
+    height: 40px;
+    padding:5px 10px;
+    font-size: 16px;
+}
+
+.todo-list .eklendi{
+    list-style: none;
+    border: 2px solid var(--black);
+    padding: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    align-items: center;
+    & p{
+        cursor: pointer;
+    &.clicked{
+        text-decoration: line-through;
+        text-decoration-color: var(--black);
+        color: gray;
+    }
+    }
+}
+
+.todo-list .eklendi i{
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--black);
+}
+.todo-list .eklendi button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.clearAll{
+    width: 100%;
+    padding:10px 0px;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
